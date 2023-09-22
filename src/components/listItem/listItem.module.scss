@@ -1,0 +1,20 @@
+@import 'src/styles/_variables';
+.item {
+	> button {
+		padding: 5px 10px;
+		cursor: pointer;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: darken($white, 15%);
+		}
+		&.active {
+			color: $white;
+			margin: 4px 0;
+		}
+	}
+}

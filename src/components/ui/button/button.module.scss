@@ -1,0 +1,17 @@
+@import 'src/styles/_variables';
+
+.button {
+	border: none;
+	outline: none;
+	font-size: 18px;
+	border-radius: 10px;
+	padding: 10px 20px;
+	transition: all 0.15s ease;
+	background-color: $colorBtn;
+	cursor: pointer;
+	color: $white;
+
+	&:hover {
+		background-color: rgba($colorBtn, 0.7);
+	}
+}
