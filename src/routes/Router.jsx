@@ -7,7 +7,7 @@ export const Router = () => {
 	const { isAuth } = useAuth()
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
 				{routes.map(route => {
 					if (route.isAuth && !isAuth) {
