@@ -1,8 +1,11 @@
-import { useGetAllPostsQuery } from './redux/listApi'
-import { ListItem } from './components/listItem/ListItem'
-import { useState, memo, useCallback } from 'react'
+import { memo, useCallback, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import AutoSizer from 'react-virtualized-auto-sizer'
 import { VariableSizeList } from 'react-window'
+
+import { ListItem } from './components/listItem/ListItem'
+
+import { useGetAllPostsQuery } from './redux/listApi'
 import './styles/index.scss'
 
 export const App = () => {
@@ -28,6 +31,9 @@ export const App = () => {
 		[data, isFetching, page]
 	)
 
+	const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+	const itemSize = isMobile ? 270 : 120
+
 	const MemoListItem = memo(ListItem)
 
 	if (isLoading) {
@@ -43,7 +49,7 @@ export const App = () => {
 						width={width}
 						height={height}
 						itemCount={data.posts.length}
-						itemSize={() => 120}
+						itemSize={index => itemSize}
 						overscanCount={5}
 						onItemsRendered={handleItemsRendered}
 					>

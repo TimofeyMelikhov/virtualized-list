@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 import { useAuth } from '../hooks/useAuth'
-import { routes } from './routes.data'
+
 import { NotFound } from '../components/notFound/NotFound'
+
+import { routes } from './routes.data'
 
 export const Router = () => {
 	const { isAuth } = useAuth()

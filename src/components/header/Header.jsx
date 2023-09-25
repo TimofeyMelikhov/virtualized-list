@@ -1,6 +1,7 @@
-import styles from './header.module.scss'
 import { IoMdArrowBack } from 'react-icons/io'
 import { useLocation, useNavigate } from 'react-router-dom'
+
+import styles from './header.module.scss'
 
 export const Header = () => {
 	const { pathname } = useLocation()

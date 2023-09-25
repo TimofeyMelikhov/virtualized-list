@@ -1,5 +1,6 @@
-import { App } from '../App'
 import { AboutPost } from '../components/aboutPost/AboutPost'
+
+import { App } from '../App'
 
 export const routes = [
 	{

@@ -1,11 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './listItem.module.scss'
+
 import { Button } from '../ui/button/Button'
+
+import styles from './listItem.module.scss'
 
 export const ListItem = ({ title, body, id }) => {
 	const navigate = useNavigate()
 
-	const maxLength = 160
+	const maxLength = 120
 
 	const trancatedText = body.slice(0, maxLength)
 

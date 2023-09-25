@@ -1,7 +1,7 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
-import { Layout } from '../layout/Layout'
+
 import { useGetPostInfoQuery } from '../../redux/listApi'
+import { Layout } from '../layout/Layout'
 
 export const AboutPost = () => {
 	const { id } = useParams()

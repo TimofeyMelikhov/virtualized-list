@@ -1,5 +1,6 @@
-import styles from './button.module.scss'
 import cn from 'clsx'
+
+import styles from './button.module.scss'
 
 export const Button = ({ children, clickHandler, size = 'xl' }) => {
 	return (
